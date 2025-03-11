@@ -1,0 +1,17 @@
+.featuredSection {
+    padding: var(--section-padding);
+    background-color: #f8f9fa;
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
