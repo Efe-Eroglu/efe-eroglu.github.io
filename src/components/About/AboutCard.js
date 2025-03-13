@@ -31,8 +31,9 @@ function AboutCard() {
               <ImPointRight /> Attending Tech Conferences
             </li>
           </ul>
+          <br></br>
+          <br></br>
 
-          <footer className="blockquote-footer">Efe Eroğlu</footer>
         </blockquote>
       </Card.Body>
     </Card>

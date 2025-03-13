@@ -2,12 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import solarPanel from "../../Assets/Projects/solar.jpg";
+import stockPrediction from "../../Assets/Projects/stock.png";
+import financialDashboard from "../../Assets/Projects/finance.jpeg";
+import movieRecommendation from "../../Assets/Projects/movie.png";
+import foodOrdering from "../../Assets/Projects/mobile.png";
 
 function Projects() {
   return (
@@ -15,78 +14,63 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Works</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are some of my recent projects that involve AI, data science, and full-stack development.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={solarPanel}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Solar Panel Fault Detection"
+              description="An AI-powered fault detection system for solar panels using machine learning and computer vision. This project leverages VGG16-based deep learning models to detect cracks and dirt on solar panels. Flask is used to serve the model as an API, allowing users to upload images for fault analysis and maintenance optimization."
+              ghLink="https://github.com/Efe-Eroglu/solar-panel-fault-detection"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={stockPrediction}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Stock Price Prediction"
+              description="A stock market prediction model based on financial indicators such as RSI, Ichimoku Cloud, SMA, Bollinger Bands, and MACD. Using Python and Pandas, it processes stock data and applies predictive analysis techniques to forecast price movements."
+              ghLink="https://github.com/Efe-Eroglu/Hisse_Fiyat_Tahmini"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={financialDashboard}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Financial Dashboard Backend"
+              description="A real-time financial dashboard backend that tracks cryptocurrency market trends, price changes, and trading volumes. Users can create watchlists and monitor assets efficiently. The backend is built with FastAPI and PostgreSQL, providing high-performance financial data processing."
+              ghLink="https://github.com/Efe-Eroglu/financial-dashboard-backend"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={movieRecommendation}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Movie Recommendation System"
+              description="A personalized movie recommendation engine built using NLP techniques. The project employs the SBERT model to generate embeddings for movie descriptions, genres, and director names, calculating similarities between movies to offer user-specific recommendations."
+              ghLink="https://github.com/Efe-Eroglu/movie-recommendation-system"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={foodOrdering}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Food Ordering App"
+              description="A mobile application developed with React Native for seamless food ordering. Users can browse restaurants, add favorites, filter restaurants, and place orders. Firebase is used for authentication and database management, while Redux handles state management."
+              ghLink="https://github.com/Efe-Eroglu/Food-Ordering-App"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
