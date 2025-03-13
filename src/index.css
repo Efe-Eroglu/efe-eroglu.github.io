@@ -1,83 +1,8 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #2a2a2a;
-  --accent-color: #00ff88;
-  --text-color: #333;
-  --background-color: #ffffff;
-  --section-padding: 4rem 0;
-  --max-width: 1200px;
-  --border-radius: 8px;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-/* App Layout */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-  padding: var(--section-padding);
-}
-
-/* Reusable Container */
-.container {
-  width: 90%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* Responsive Breakpoints */
-@media (max-width: 768px) {
-  :root {
-    --section-padding: 2rem 0;
-  }
-  
-  .container {
-    width: 95%;
-  }
-}
-
-/* Utility Classes */
-.text-center {
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
-}
-
-.button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  border-radius: var(--border-radius);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.button-primary {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-}
-
-.button-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--box-shadow);
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
 }
