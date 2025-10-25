@@ -1,9 +1,11 @@
 .footer {
   position: relative;
-  background: var(--bg-secondary);
-  color: var(--text-dark);
-  padding: 4rem 2rem 2rem;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%);
+  color: var(--text-light);
+  padding: 5rem 2rem 2rem;
   overflow: hidden;
+  margin-top: 5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-background {
@@ -19,27 +21,27 @@
 .gradient-orb-footer {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.15;
-  animation: float 15s ease-in-out infinite;
+  filter: blur(100px);
+  opacity: 0.25;
+  animation: float 20s ease-in-out infinite;
 }
 
 .orb-1 {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
-  top: -100px;
-  right: -50px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #6366f1 0%, #8b5cf6 50%, transparent 70%);
+  top: -150px;
+  right: -100px;
   animation-delay: 0s;
 }
 
 .orb-2 {
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
-  bottom: -50px;
-  left: -50px;
-  animation-delay: 5s;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #ec4899 0%, #f43f5e 50%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+  animation-delay: 7s;
 }
 
 @keyframes float {
@@ -62,20 +64,24 @@
 .footer-brand h3 {
   font-size: 1.75rem;
   margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #818cf8 0%, #ec4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 .footer-brand p {
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 0.5rem;
   line-height: 1.6;
 }
 
 .footer-tagline {
-  color: var(--primary-color) !important;
+  background: linear-gradient(135deg, #818cf8 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 1rem !important;
@@ -90,30 +96,33 @@
 
 .badge {
   padding: 0.4rem 0.9rem;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
+  background: rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.3);
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-gray);
+  color: #818cf8;
   transition: all 0.3s ease;
 }
 
 .badge:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  background: rgba(129, 140, 248, 0.2);
+  border-color: #818cf8;
+  color: #a78bfa;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
 }
 
 .footer-links h4,
 .footer-contact h4 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
-  color: var(--text-dark);
+  color: white;
+  font-weight: 600;
 }
 
 .footer-contact p {
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -129,7 +138,7 @@
 }
 
 .footer-links a {
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
@@ -143,12 +152,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #818cf8 0%, #ec4899 100%);
   transition: width 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--primary-color);
+  color: white;
   transform: translateX(5px);
 }
 
@@ -165,36 +174,38 @@
 .footer-social a {
   width: 45px;
   height: 45px;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.1rem;
   transition: all 0.3s ease;
   text-decoration: none;
+  backdrop-filter: blur(10px);
 }
 
 .footer-social a:hover {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, #818cf8 0%, #ec4899 100%);
   border-color: transparent;
   color: white;
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 30px rgba(129, 140, 248, 0.5);
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
   position: relative;
   text-align: center;
-  color: var(--text-gray);
+  color: rgba(255, 255, 255, 0.5);
   padding-top: 2rem;
 }
 
 .footer-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   margin-bottom: 2rem;
 }
 
@@ -204,7 +215,7 @@
 }
 
 .footer-tech {
-  color: var(--text-gray-light);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 0.85rem;
 }
 
