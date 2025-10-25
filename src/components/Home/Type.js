@@ -1,21 +1,36 @@
-import React from "react";
-import Typewriter from "typewriter-effect";
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
+import './Type.css';
 
-function Type() {
+const Type = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      strings: [
+        'Software Engineer',
+        'Masters Student',
+        'Tech Researcher',
+        'Full Stack Developer',
+        'Problem Solver'
+      ],
+      typeSpeed: 50,
+      backSpeed: 40,
+      loop: true
+    };
+
+    const typed = new Typed(typedRef.current, options);
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
-    <Typewriter
-      options={{
-        strings: [
-          "Software Developer",
-          "AI Developer",
-          "Generative AI Explorer",
-        ],
-        autoStart: true,
-        loop: true,
-        deleteSpeed: 50,
-      }}
-    />
+    <div className="typed-text">
+      <span ref={typedRef} />
+    </div>
   );
-}
+};
 
 export default Type;

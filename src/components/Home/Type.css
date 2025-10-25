@@ -1,0 +1,9 @@
+.typed-text {
+  display: inline-block;
+  min-height: 2.5rem;
+}
+
+.typed-text span {
+  color: #667eea;
+  font-weight: 600;
+}

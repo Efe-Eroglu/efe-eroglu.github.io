@@ -1,49 +1,107 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
-import Particle from "../Particle";
-import Home2 from "./Home2";
-import Type from "./Type";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import Type from './Type';
+import './Home.css';
 
-function Home() {
+const Home = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section>
-      <Container fluid className="home-section" id="home">
-        <Particle />
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
+    <section id="home" className="home-section">
+      <motion.div 
+        className="home-container"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="home-content">
+          <motion.h1 
+            className="home-title"
+            variants={itemVariants}
+          >
+            Hi, I'm <span className="name-highlight">Efe Eroglu</span>
+          </motion.h1>
+          
+          <motion.div 
+            className="home-subtitle"
+            variants={itemVariants}
+          >
+            <h2>
+              I'm a <Type />
+            </h2>
+          </motion.div>
 
-              <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> EFE EROĞLU</strong>
-              </h1>
+          <motion.p 
+            className="home-description"
+            variants={itemVariants}
+          >
+            Bridging the gap between cutting-edge technology and academic research.
+            Passionate about building innovative solutions and advancing knowledge
+            through interdisciplinary research.
+          </motion.p>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
-                <Type />
-              </div>
-            </Col>
+          <motion.div 
+            className="home-buttons"
+            variants={itemVariants}
+          >
+            <Link to="/projects" className="btn btn-primary">
+              View My Work
+            </Link>
+            <Link to="/contact" className="btn btn-secondary">
+              Get In Touch
+            </Link>
+          </motion.div>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Home2 />
+          <motion.div 
+            className="social-links"
+            variants={itemVariants}
+          >
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <FaGithub />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <FaLinkedin />
+            </a>
+            <a href="mailto:contact@example.com" aria-label="Email">
+              <FaEnvelope />
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div 
+          className="scroll-indicator"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+        >
+          <span>Scroll to explore</span>
+          <FaArrowDown />
+        </motion.div>
+      </motion.div>
+
+      <div className="home-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
     </section>
   );
-}
+};
 
 export default Home;

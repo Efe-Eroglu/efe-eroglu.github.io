@@ -1,61 +1,54 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import React from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import './Footer.css';
 
-function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Efe Eroğlu</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year}</h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/Efe-Eroglu"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <h3>Efe Eroglu</h3>
+            <p>Software Engineer & Masters Student</p>
+            <p className="footer-tagline">Technology meets Research</p>
+          </div>
+
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/research">Research</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-contact">
+            <h4>Connect</h4>
+            <div className="footer-social">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub />
               </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/efeeroglu/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin />
               </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/eferogglu/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
+              <a href="mailto:contact@example.com" aria-label="Email">
+                <FaEnvelope />
               </a>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; {currentYear} Efe Eroglu. All rights reserved.</p>
+          <p>Built with React & Modern Web Technologies</p>
+        </div>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
