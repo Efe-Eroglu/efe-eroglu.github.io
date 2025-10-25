@@ -1,6 +1,6 @@
 .about-section {
   padding: 120px 2rem 80px;
-  background: #f9fafb;
+  background: var(--bg-secondary);
 }
 
 .container {
@@ -16,13 +16,13 @@
 .section-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .section-subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--text-gray);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -34,30 +34,30 @@
 }
 
 .intro-card {
-  background: white;
+  background: var(--bg-tertiary);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px var(--shadow);
 }
 
 .intro-card h3 {
   font-size: 1.8rem;
-  color: #1f2937;
+  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .intro-card p {
   font-size: 1.1rem;
-  color: #4b5563;
+  color: var(--text-gray);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
 
 .info-section {
-  background: white;
+  background: var(--bg-tertiary);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px var(--shadow);
   position: relative;
 }
 
@@ -79,7 +79,7 @@
 
 .info-section h3 {
   font-size: 2rem;
-  color: #1f2937;
+  color: var(--text-dark);
   margin-bottom: 2rem;
   padding-top: 1rem;
 }
@@ -106,9 +106,9 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #667eea;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px #e5e7eb;
+  background: var(--primary-color);
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 3px var(--border-color);
 }
 
 .timeline-item::before {
@@ -118,7 +118,7 @@
   top: 1.5rem;
   width: 2px;
   height: calc(100% + 1rem);
-  background: #e5e7eb;
+  background: var(--border-color);
 }
 
 .timeline-item:last-child::before {
@@ -127,13 +127,13 @@
 
 .timeline-content h4 {
   font-size: 1.4rem;
-  color: #1f2937;
+  color: var(--text-dark);
   margin-bottom: 0.5rem;
 }
 
 .institution {
   font-size: 1.1rem;
-  color: #667eea;
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: block;
@@ -142,28 +142,28 @@
 .period {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background: #f3f4f6;
+  background: var(--bg-secondary);
   border-radius: 20px;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--text-gray);
   margin-bottom: 0.75rem;
 }
 
 .description {
-  color: #6b7280;
+  color: var(--text-gray);
   line-height: 1.6;
 }
 
 .skills-section {
-  background: white;
+  background: var(--bg-tertiary);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px var(--shadow);
 }
 
 .skills-section h3 {
   font-size: 2rem;
-  color: #1f2937;
+  color: var(--text-dark);
   margin-bottom: 2rem;
 }
 
@@ -186,26 +186,26 @@
 
 .skill-name {
   font-weight: 600;
-  color: #1f2937;
+  color: var(--text-dark);
 }
 
 .skill-percentage {
   font-size: 0.875rem;
-  color: #667eea;
+  color: var(--primary-color);
   font-weight: 600;
 }
 
 .skill-bar {
   width: 100%;
   height: 10px;
-  background: #e5e7eb;
+  background: var(--border-color);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   border-radius: 10px;
   transition: width 1s ease;
 }

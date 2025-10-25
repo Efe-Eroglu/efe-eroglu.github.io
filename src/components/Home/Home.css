@@ -20,7 +20,7 @@
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #1f2937;
+  color: var(--text-dark);
   line-height: 1.2;
 }
 
@@ -34,13 +34,13 @@
 .home-subtitle {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #4b5563;
+  color: var(--text-gray);
   margin-bottom: 1.5rem;
 }
 
 .home-description {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--text-gray);
   max-width: 700px;
   margin: 0 auto 2.5rem;
   line-height: 1.8;
@@ -97,12 +97,12 @@
 }
 
 .social-links a {
-  color: #4b5563;
+  color: var(--text-gray);
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #667eea;
+  color: var(--primary-color);
   transform: translateY(-3px);
 }
 
@@ -115,7 +115,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: #9ca3af;
+  color: var(--text-gray-light);
   font-size: 0.9rem;
   animation: bounce 2s infinite;
 }

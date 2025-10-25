@@ -113,23 +113,41 @@ Replace placeholder images in the `public` folder with your own.
 
 ## 🌐 Deployment
 
-### GitHub Pages
+### GitHub Pages (Automatic)
 
-1. Install gh-pages:
+This repository is configured for **automatic deployment** using GitHub Actions!
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to your repository on GitHub
+   - Click on `Settings` → `Pages`
+   - Under "Source", select **GitHub Actions**
+
+2. **That's it!** Every time you push to the `main` branch, GitHub Actions will automatically:
+   - Build your React app
+   - Deploy it to GitHub Pages
+   - Your site will be live at: `https://efe-eroglu.github.io`
+
+3. **No manual deployment needed!** Just push your code:
 ```bash
-npm install --save-dev gh-pages
+git add .
+git commit -m "Your commit message"
+git push origin main
 ```
 
-2. Add to package.json:
-```json
-"homepage": "https://yourusername.github.io/portfolio",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
+The deployment typically takes 1-2 minutes. You can check the deployment status in the "Actions" tab of your repository.
+
+### Manual Deployment (Alternative)
+
+If you prefer manual deployment:
+
+1. Build the project:
+```bash
+npm run build
 ```
 
-3. Deploy:
+2. Deploy to GitHub Pages:
 ```bash
 npm run deploy
 ```
@@ -138,7 +156,6 @@ npm run deploy
 
 - **Netlify**: Connect your repo for automatic deployments
 - **Vercel**: Push to GitHub and connect for deployments
-- **Heroku**: Follow Heroku's React deployment guide
 
 ## 📄 License
 

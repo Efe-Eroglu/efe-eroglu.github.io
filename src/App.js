@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home/Home';
@@ -8,9 +8,16 @@ import Research from './components/Research/Research';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const currentTheme = savedTheme || 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
@@ -24,6 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+        <ThemeToggle />
       </div>
     </Router>
   );

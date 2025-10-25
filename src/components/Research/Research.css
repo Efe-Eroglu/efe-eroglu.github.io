@@ -1,6 +1,6 @@
 .research-section {
   padding: 120px 2rem 80px;
-  background: #f9fafb;
+  background: var(--bg-secondary);
 }
 
 .research-grid {
@@ -10,17 +10,17 @@
 }
 
 .research-card {
-  background: white;
+  background: var(--bg-tertiary);
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px var(--shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
 .research-card:hover {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 40px var(--shadow-hover);
 }
 
 .research-card::before {
@@ -72,7 +72,7 @@
 
 .research-content h3 {
   font-size: 1.5rem;
-  color: #1f2937;
+  color: var(--text-dark);
   margin-bottom: 0.5rem;
   line-height: 1.4;
 }
@@ -84,7 +84,7 @@
 }
 
 .research-description {
-  color: #6b7280;
+  color: var(--text-gray);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
