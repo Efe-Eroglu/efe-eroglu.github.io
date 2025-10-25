@@ -1,0 +1,112 @@
+/* Custom Cursor Styles - Ultra Performance */
+.custom-cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.custom-cursor.hovering {
+  width: 24px;
+  height: 24px;
+  background: var(--secondary-color);
+}
+
+.custom-cursor.hovering::before {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-cursor.clicking {
+  width: 8px;
+  height: 8px;
+  background: #f093fb;
+}
+
+.custom-cursor.clicking::before {
+  width: 2px;
+  height: 2px;
+}
+
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Show default cursor for text inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+textarea {
+  cursor: text !important;
+}
+
+/* Show default cursor for links and buttons on mobile */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+  
+  .custom-cursor,
+  .cursor-trail {
+    display: none;
+  }
+}
+
+/* Accessibility - respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor,
+  .cursor-trail {
+    transition: none;
+    animation: none;
+  }
+  
+  .cursor-trail {
+    display: none;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .custom-cursor {
+  box-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .custom-cursor.hovering {
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .custom-cursor.clicking {
+  box-shadow: 0 0 25px rgba(240, 147, 251, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Performance optimizations */
+.custom-cursor {
+  backface-visibility: hidden;
+  transform: translate3d(-50%, -50%, 0);
+  contain: layout style paint;
+}

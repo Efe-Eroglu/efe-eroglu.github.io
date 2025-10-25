@@ -9,6 +9,7 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ThemeToggle from './components/ThemeToggle';
+import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         </Routes>
         <Footer />
         <ThemeToggle />
+        <CustomCursor />
       </div>
     </Router>
   );
