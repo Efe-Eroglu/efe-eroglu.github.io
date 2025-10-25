@@ -103,7 +103,6 @@ const Footer = () => {
         >
           <div className="footer-divider"></div>
           <p>&copy; {currentYear} Efe Eroglu. All rights reserved.</p>
-          <p className="footer-tech">Built with ❤️ using React, Framer Motion & Modern Web Technologies</p>
         </motion.div>
       </div>
       <div className="footer-background">
