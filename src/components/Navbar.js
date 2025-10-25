@@ -34,6 +34,7 @@ const Navbar = () => {
     >
       <div className="nav-container">
         <Link to="/" className="nav-logo">
+          <img src="/logo.png" alt="Efe Eroglu" className="logo-image" />
           <span className="logo-text">Efe Eroglu</span>
         </Link>
 

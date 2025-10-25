@@ -4,7 +4,6 @@
   color: var(--text-light);
   padding: 5rem 2rem 2rem;
   overflow: hidden;
-  margin-top: 5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -26,21 +25,21 @@
   animation: float 20s ease-in-out infinite;
 }
 
-.orb-1 {
+.footer-orb-1 {
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, #6366f1 0%, #8b5cf6 50%, transparent 70%);
-  top: -150px;
-  right: -100px;
+  top: 20%;
+  left: 10%;
   animation-delay: 0s;
 }
 
-.orb-2 {
+.footer-orb-2 {
   width: 350px;
   height: 350px;
   background: radial-gradient(circle, #ec4899 0%, #f43f5e 50%, transparent 70%);
-  bottom: -100px;
-  left: -100px;
+  bottom: 15%;
+  right: 15%;
   animation-delay: 7s;
 }
 
@@ -61,9 +60,28 @@
   margin-bottom: 3rem;
 }
 
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
 .footer-brand h3 {
   font-size: 1.75rem;
-  margin-bottom: 0.75rem;
+  margin: 0;
   background: linear-gradient(135deg, #818cf8 0%, #ec4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

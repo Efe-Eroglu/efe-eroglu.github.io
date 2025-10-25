@@ -38,7 +38,10 @@ const Footer = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div className="footer-brand" variants={itemVariants}>
-            <h3>Efe Eroglu</h3>
+            <div className="footer-logo-container">
+              <img src="/logo.png" alt="Efe Eroglu" className="footer-logo" />
+              <h3>Efe Eroglu</h3>
+            </div>
             <p>Software Engineer & Masters Student</p>
             <p className="footer-tagline">Technology meets Research</p>
             <div className="footer-badges">
@@ -107,8 +110,8 @@ const Footer = () => {
         </motion.div>
       </div>
       <div className="footer-background">
-        <div className="gradient-orb-footer orb-1"></div>
-        <div className="gradient-orb-footer orb-2"></div>
+        <div className="gradient-orb-footer footer-orb-1"></div>
+        <div className="gradient-orb-footer footer-orb-2"></div>
       </div>
     </footer>
   );
