@@ -43,8 +43,8 @@ const Projects = () => {
       category: 'ai',
       description: 'RAG-based multimodal AI assistant designed to facilitate digital content interaction for individuals living with dyslexia. Supports voice and text interactions; allows PDF/document uploads for Q&A.',
       technologies: ['FastAPI', 'PostgreSQL', 'ChromaDB', 'OpenAI API', 'LangChain', 'React', 'Docker'],
-      image: '/api/placeholder/400/250',
-      github: 'https://github.com/Efe-Eroglu/Syllexa-AI',
+      image: require('../../assets/syllexa.png'),
+      github: 'https://github.com/Efe-Eroglu/syllexa-ai-agent',
       live: 'https://syllexa-ai.com',
       period: 'Feb 2025 - Jun 2025',
       achievements: ['Context-aware Q&A capabilities', 'Accessibility-focused UX', 'Education/health sector prototype']
@@ -55,7 +55,7 @@ const Projects = () => {
       category: 'ai',
       description: 'AI assistant that analyzes financial tables and answers English questions using Flan-T5-Large. Features real-time chat, file upload, and financial calculations.',
       technologies: ['React', 'FastAPI', 'Python', 'Flan-T5', 'WebSocket'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/finanalyst.png'),
       github: 'https://github.com/Efe-Eroglu/FinAnalyst-Chatbot',
       live: 'https://finanalyst-demo.com',
       period: 'Jan 2025 - Mar 2025',
@@ -79,7 +79,7 @@ const Projects = () => {
       category: 'ai',
       description: 'Computer vision system using deep learning to detect solar panel defects (cracks, hot spots, etc.) through image processing and segmentation models.',
       technologies: ['PyTorch', 'TensorFlow', 'OpenCV', 'Segmentation Models'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/solarpanel.jpeg'),
       github: 'https://github.com/Efe-Eroglu/solar-panel-segmentation-and-classification',
       live: 'https://solar-panel-demo.com',
       period: 'Oct 2024 - Dec 2024',
@@ -91,7 +91,7 @@ const Projects = () => {
       category: 'web',
       description: 'Tool that automatically segments YouTube videos and provides summaries. Features subtitle extraction and GPT-based content segmentation.',
       technologies: ['Node.js', 'Flask', 'React', 'OpenAI API', 'YouTube API'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/ytproject.png'),
       github: 'https://github.com/Efe-Eroglu/youtube-automatic-content-segmentation',
       live: 'https://youtube-segmentation-demo.com',
       period: 'Aug 2024 - Oct 2024',
@@ -103,7 +103,7 @@ const Projects = () => {
       category: 'web',
       description: 'Backend solution for monitoring and visualizing crypto/financial markets with real-time data processing and API endpoints.',
       technologies: ['Python', 'FastAPI', 'PostgreSQL', 'WebSocket', 'Redis'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/dashboard.png'),
       github: 'https://github.com/Efe-Eroglu/financial-dashboard-backend',
       live: 'https://financial-dashboard-demo.com',
       period: 'Jun 2024 - Aug 2024',
@@ -115,7 +115,7 @@ const Projects = () => {
       category: 'ai',
       description: 'Personalized movie recommendation system based on user preferences and collaborative filtering algorithms.',
       technologies: ['Flask', 'React', 'Python', 'Scikit-learn', 'PostgreSQL'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/movie.png'),
       github: 'https://github.com/Efe-Eroglu/movie-recommendation-system',
       live: 'https://movie-recommender-demo.com',
       period: 'Apr 2024 - Jun 2024',
@@ -127,7 +127,7 @@ const Projects = () => {
       category: 'mobile',
       description: 'React Native mobile application for burger ordering with favorites, coupons, and cart functionality.',
       technologies: ['React Native', 'Firebase', 'Redux', 'JavaScript'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/foodorder.png'),
       github: 'https://github.com/Efe-Eroglu/Food-Ordering-App',
       live: 'https://food-ordering-demo.com',
       period: 'Feb 2024 - Apr 2024',
@@ -219,9 +219,11 @@ const Projects = () => {
               >
                 <div className="project-overlay">
                   <div className="project-actions">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-btn">
-                      <FaGithub />
-                    </a>
+                    {project.title !== 'Öğrenio' && project.title !== 'SynapSense' && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-btn">
+                        <FaGithub />
+                      </a>
+                    )}
                     {project.title === 'Öğrenio' && (
                       <a href={project.live} target="_blank" rel="noopener noreferrer" className="action-btn">
                         <FaExternalLinkAlt />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaCheck, FaTimes } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -17,12 +17,25 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const [showToast, setShowToast] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
+    setIsSubmitting(true);
+    
+    // Simulate form submission delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(false);
+    setShowToast(true);
+    
+    // Auto hide toast after 4 seconds
+    setTimeout(() => {
+      setShowToast(false);
+    }, 4000);
   };
 
   const handleChange = (e) => {
@@ -123,8 +136,18 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="submit-btn">
-                Send Message
+              <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <motion.div
+                    className="loading-spinner"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                  >
+                    ⏳
+                  </motion.div>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </motion.div>
@@ -177,6 +200,48 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {showToast && (
+          <motion.div
+            className="toast-notification"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.8 }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 300, 
+              damping: 30,
+              duration: 0.3 
+            }}
+          >
+            <div className="toast-content">
+              <div className="toast-icon">
+                <FaCheck />
+              </div>
+              <div className="toast-message">
+                <h4>Message Sent!</h4>
+                <p>Thank you for your message! I will get back to you soon.</p>
+              </div>
+              <button 
+                className="toast-close"
+                onClick={() => setShowToast(false)}
+              >
+                <FaTimes />
+              </button>
+            </div>
+            <div className="toast-progress">
+              <motion.div
+                className="toast-progress-bar"
+                initial={{ width: "100%" }}
+                animate={{ width: "0%" }}
+                transition={{ duration: 4, ease: "linear" }}
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
