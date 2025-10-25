@@ -27,7 +27,7 @@
   border-radius: 50%;
   filter: blur(80px);
   opacity: 0.5;
-  animation: float 20s infinite ease-in-out;
+  will-change: transform;
 }
 
 .orb-1 {
@@ -36,6 +36,7 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   top: -200px;
   right: -150px;
+  animation: moveOrb1 15s infinite ease-in-out;
   animation-delay: 0s;
 }
 
@@ -45,7 +46,8 @@
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   bottom: -200px;
   left: -150px;
-  animation-delay: 8s;
+  animation: moveOrb2 18s infinite ease-in-out;
+  animation-delay: 1s;
 }
 
 .orb-3 {
@@ -54,18 +56,64 @@
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   top: 30%;
   right: 20%;
-  animation-delay: 4s;
+  animation: moveOrb3 20s infinite ease-in-out;
+  animation-delay: 2s;
 }
 
 @keyframes float {
   0%, 100% {
     transform: translate(0, 0) scale(1);
   }
+  25% {
+    transform: translate(50px, -40px) scale(1.15);
+  }
+  50% {
+    transform: translate(30px, 50px) scale(0.95);
+  }
+  75% {
+    transform: translate(-50px, -20px) scale(1.1);
+  }
+}
+
+@keyframes moveOrb1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(150px, -100px) scale(1.2);
+  }
+  50% {
+    transform: translate(-80px, 120px) scale(0.9);
+  }
+  75% {
+    transform: translate(100px, 50px) scale(1.1);
+  }
+}
+
+@keyframes moveOrb2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-120px, 120px) scale(1.15);
+  }
+  50% {
+    transform: translate(100px, -80px) scale(0.95);
+  }
+  75% {
+    transform: translate(-100px, -50px) scale(1.1);
+  }
+}
+
+@keyframes moveOrb3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
   33% {
-    transform: translate(30px, -30px) scale(1.1);
+    transform: translate(120px, -150px) scale(1.15);
   }
   66% {
-    transform: translate(-20px, 20px) scale(0.9);
+    transform: translate(-150px, 120px) scale(0.9);
   }
 }
 

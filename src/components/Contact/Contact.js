@@ -36,20 +36,20 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      content: 'efe.eroglu@example.com',
-      link: 'mailto:efe.eroglu@example.com'
+      content: 'efeeroglu.dev@gmail.com',
+      link: 'mailto:efeeroglu.dev@gmail.com'
     },
     {
       icon: <FaLinkedin />,
       title: 'LinkedIn',
       content: 'linkedin.com/in/efeeroglu',
-      link: 'https://linkedin.com'
+      link: 'https://www.linkedin.com/in/efeeroglu/'
     },
     {
       icon: <FaGithub />,
       title: 'GitHub',
-      content: 'github.com/efeeroglu',
-      link: 'https://github.com'
+      content: 'github.com/Efe-Eroglu',
+      link: 'https://github.com/Efe-Eroglu'
     }
   ];
 
@@ -163,13 +163,13 @@ const Contact = () => {
             <div className="contact-cta">
               <p>Or find me on social media:</p>
               <div className="social-icons">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/efeeroglu/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Efe-Eroglu" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </a>
-                <a href="mailto:contact@example.com">
+                <a href="mailto:efeeroglu.dev@gmail.com">
                   <FaEnvelope />
                 </a>
               </div>
