@@ -21,8 +21,8 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
-  opacity: 0.25;
-  animation: float 20s ease-in-out infinite;
+  opacity: 0.3;
+  animation: float 15s ease-in-out infinite;
 }
 
 .footer-orb-1 {
@@ -31,6 +31,7 @@
   background: radial-gradient(circle, #6366f1 0%, #8b5cf6 50%, transparent 70%);
   top: 20%;
   left: 10%;
+  animation: float1 18s ease-in-out infinite;
   animation-delay: 0s;
 }
 
@@ -40,12 +41,70 @@
   background: radial-gradient(circle, #ec4899 0%, #f43f5e 50%, transparent 70%);
   bottom: 15%;
   right: 15%;
-  animation-delay: 7s;
+  animation: float2 22s ease-in-out infinite;
+  animation-delay: 5s;
 }
 
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(20px, -20px) scale(1.1); }
+@keyframes float1 {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1) rotate(0deg); 
+    opacity: 0.3;
+  }
+  12.5% { 
+    transform: translate(80px, -60px) scale(1.3) rotate(45deg); 
+    opacity: 0.4;
+  }
+  25% { 
+    transform: translate(120px, -100px) scale(0.9) rotate(90deg); 
+    opacity: 0.35;
+  }
+  37.5% { 
+    transform: translate(60px, -140px) scale(1.1) rotate(135deg); 
+    opacity: 0.25;
+  }
+  50% { 
+    transform: translate(-40px, -120px) scale(0.8) rotate(180deg); 
+    opacity: 0.2;
+  }
+  62.5% { 
+    transform: translate(-100px, -80px) scale(1.2) rotate(225deg); 
+    opacity: 0.3;
+  }
+  75% { 
+    transform: translate(-80px, -40px) scale(1.0) rotate(270deg); 
+    opacity: 0.35;
+  }
+  87.5% { 
+    transform: translate(-20px, -20px) scale(1.1) rotate(315deg); 
+    opacity: 0.4;
+  }
+}
+
+@keyframes float2 {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1) rotate(0deg); 
+    opacity: 0.3;
+  }
+  16.6% { 
+    transform: translate(-120px, 80px) scale(1.4) rotate(60deg); 
+    opacity: 0.4;
+  }
+  33.3% { 
+    transform: translate(-80px, 120px) scale(0.8) rotate(120deg); 
+    opacity: 0.25;
+  }
+  50% { 
+    transform: translate(40px, 100px) scale(1.2) rotate(180deg); 
+    opacity: 0.35;
+  }
+  66.6% { 
+    transform: translate(100px, 60px) scale(0.9) rotate(240deg); 
+    opacity: 0.3;
+  }
+  83.3% { 
+    transform: translate(60px, 20px) scale(1.1) rotate(300deg); 
+    opacity: 0.4;
+  }
 }
 
 .footer .container {

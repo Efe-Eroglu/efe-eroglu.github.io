@@ -48,6 +48,13 @@ const Footer = () => {
               <span className="badge">AI/ML</span>
               <span className="badge">Deep Learning</span>
               <span className="badge">LLMs</span>
+              <span className="badge">NLP</span>
+              <span className="badge">Computer Vision</span>
+              <span className="badge">Neural Networks</span>
+              <span className="badge">TensorFlow</span>
+              <span className="badge">PyTorch</span>
+              <span className="badge">Research</span>
+              <span className="badge">Innovation</span>
             </div>
           </motion.div>
 
