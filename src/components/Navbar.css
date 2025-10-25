@@ -5,7 +5,7 @@
   background: var(--bg-primary);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px var(--shadow);
-  z-index: 1000;
+  z-index: 9999;
   transition: all 0.3s ease;
 }
 
