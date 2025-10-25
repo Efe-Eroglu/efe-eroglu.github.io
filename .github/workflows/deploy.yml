@@ -35,8 +35,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          PUBLIC_URL: /efe-eroglu.github.io
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

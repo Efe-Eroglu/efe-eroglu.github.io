@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Professional portfolio for Software Engineer & Masters Student - Technology meets Research",
   "private": true,
-  "homepage": "https://efe-eroglu.github.io",
+  "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
