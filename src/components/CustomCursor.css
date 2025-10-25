@@ -1,14 +1,14 @@
-/* Custom Cursor Styles - Ultra Performance */
+/* Custom Cursor Styles - Ultra Smooth Performance */
 .custom-cursor {
   position: fixed;
   width: 12px;
   height: 12px;
-  background: var(--primary-color);
+  background: #667eea;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
   will-change: transform;
 }
 
@@ -21,8 +21,10 @@
   height: 4px;
   background: white;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backface-visibility: hidden;
 }
 
 .custom-cursor.hovering {
@@ -104,9 +106,8 @@ textarea {
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Performance optimizations */
+/* Additional smooth performance optimizations */
 .custom-cursor {
-  backface-visibility: hidden;
-  transform: translate3d(-50%, -50%, 0);
-  contain: layout style paint;
+  filter: blur(0);
+  -webkit-filter: blur(0);
 }

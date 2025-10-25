@@ -9,14 +9,10 @@ const CustomCursor = () => {
     if (!cursor) return;
 
     let isHovering = false;
-    let isClicking = false;
 
     const updateCursor = (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      
-      cursor.style.left = x + 'px';
-      cursor.style.top = y + 'px';
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
     };
 
     const handleMouseMove = (e) => {
@@ -24,13 +20,11 @@ const CustomCursor = () => {
     };
 
     const handleMouseDown = () => {
-      isClicking = true;
-      cursor.classList.toggle('clicking', true);
+      cursor.classList.add('clicking');
     };
 
     const handleMouseUp = () => {
-      isClicking = false;
-      cursor.classList.toggle('clicking', false);
+      cursor.classList.remove('clicking');
     };
 
     const handleMouseOver = (e) => {
