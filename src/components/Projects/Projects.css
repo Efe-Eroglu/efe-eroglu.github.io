@@ -200,6 +200,54 @@
   margin-bottom: 1rem;
 }
 
+.project-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-role {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  font-style: italic;
+}
+
+.project-achievements {
+  margin-bottom: 1rem;
+}
+
+.project-achievements h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.project-achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-achievements li {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.project-achievements li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -228,5 +276,17 @@
 
   .filter-btn {
     white-space: nowrap;
+  }
+
+  .project-meta {
+    justify-content: flex-start;
+  }
+
+  .project-achievements h4 {
+    font-size: 0.9rem;
+  }
+
+  .project-achievements li {
+    font-size: 0.8rem;
   }
 }
