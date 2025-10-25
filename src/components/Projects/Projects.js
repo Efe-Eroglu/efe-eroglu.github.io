@@ -19,7 +19,7 @@ const Projects = () => {
       category: 'ai',
       description: 'AI-powered wearable solution that analyzes EEG and biophysiological sensor data in real-time to measure user focus and mental state levels. Designed for attention management and performance optimization in education, work, and health scenarios.',
       technologies: ['Python', 'PyTorch', 'NumPy', 'SciPy', 'Flutter', 'FastAPI', 'Docker'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/synapsense.png'),
       github: 'https://github.com/Efe-Eroglu/SynapSense',
       live: 'https://synapsense-demo.com',
       period: 'Nov 2024 - Aug 2025',
@@ -31,7 +31,7 @@ const Projects = () => {
       category: 'mobile',
       description: 'Mobile application providing personalized educational experiences for preschool children with special needs (ADHD, learning disabilities, autism spectrum). Features teacher/parent panels for development tracking.',
       technologies: ['Flutter', 'Firebase', 'PostgreSQL', 'FastAPI', 'Python', 'Power BI'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/ogrenio.jpeg'),
       github: 'https://github.com/Efe-Eroglu/Ogrenio',
       live: 'https://play.google.com/store/apps/details?id=com.ogrenio.app',
       period: 'Sep 2024 - Jul 2025',
@@ -67,7 +67,7 @@ const Projects = () => {
       category: 'ai',
       description: 'Platform that predicts depression risk using lifestyle/health/academic data with SHAP-based explainability. Provides interpretable AI insights for mental health assessment.',
       technologies: ['Python', 'Scikit-learn', 'XGBoost', 'SHAP', 'Flask', 'FastAPI'],
-      image: '/api/placeholder/400/250',
+      image: require('../../assets/xai_p1.png'),
       github: 'https://github.com/Efe-Eroglu/xai-depression-predictor',
       live: 'https://depression-predictor-demo.com',
       period: 'Dec 2024 - Feb 2025',
@@ -213,7 +213,10 @@ const Projects = () => {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <div className="project-image">
+              <div 
+                className="project-image"
+                style={{ backgroundImage: `url(${project.image})` }}
+              >
                 <div className="project-overlay">
                   <div className="project-actions">
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="action-btn">
