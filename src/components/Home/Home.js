@@ -51,9 +51,9 @@ const Home = () => {
             className="home-description"
             variants={itemVariants}
           >
-            Bridging the gap between cutting-edge technology and academic research.
-            Passionate about building innovative solutions and advancing knowledge
-            through interdisciplinary research.
+            Building intelligent AI systems with LLMs, NLP & Deep Learning.
+            Passionate about turning AI research into real-world applications
+            and creating innovative solutions that make a difference.
           </motion.p>
 
           <motion.div 
@@ -72,13 +72,13 @@ const Home = () => {
             className="social-links"
             variants={itemVariants}
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Efe-Eroglu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/efeeroglu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
-            <a href="mailto:contact@example.com" aria-label="Email">
+            <a href="mailto:efeeroglu.dev@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
           </motion.div>

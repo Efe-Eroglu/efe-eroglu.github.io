@@ -42,12 +42,12 @@ const Footer = () => {
               <img src="/logo.png" alt="Efe Eroglu" className="footer-logo" />
               <h3>Efe Eroglu</h3>
             </div>
-            <p>Software Engineer & Masters Student</p>
-            <p className="footer-tagline">Technology meets Research</p>
+            <p>AI Developer & Masters Student</p>
+            <p className="footer-tagline">AI meets Innovation</p>
             <div className="footer-badges">
-              <span className="badge">Full Stack</span>
-              <span className="badge">Research</span>
-              <span className="badge">Innovation</span>
+              <span className="badge">AI/ML</span>
+              <span className="badge">Deep Learning</span>
+              <span className="badge">LLMs</span>
             </div>
           </motion.div>
 
@@ -67,7 +67,7 @@ const Footer = () => {
             <p>Open to collaboration and new opportunities</p>
             <div className="footer-social">
               <motion.a 
-                href="https://github.com" 
+                href="https://github.com/Efe-Eroglu" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="GitHub"
@@ -77,7 +77,7 @@ const Footer = () => {
                 <FaGithub />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/efeeroglu/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="LinkedIn"
@@ -87,7 +87,7 @@ const Footer = () => {
                 <FaLinkedin />
               </motion.a>
               <motion.a 
-                href="mailto:contact@example.com" 
+                href="mailto:efeeroglu.dev@gmail.com" 
                 aria-label="Email"
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.95 }}

@@ -8,10 +8,10 @@ const Type = () => {
   useEffect(() => {
     const options = {
       strings: [
-        'Software Engineer',
+        'AI Developer',
         'Masters Student',
-        'Tech Researcher',
-        'Full Stack Developer',
+        'ML Engineer',
+        'Deep Learning Researcher',
         'Problem Solver'
       ],
       typeSpeed: 50,
