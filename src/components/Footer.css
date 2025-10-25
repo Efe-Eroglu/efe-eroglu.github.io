@@ -318,6 +318,49 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.25rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.9rem;
+  }
+
+  .footer-social a {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.8rem;
+  }
+
+  .badge {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.7rem;
+  }
+}
+
 /* Dark theme specific styles */
 [data-theme="dark"] .footer {
   background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%);

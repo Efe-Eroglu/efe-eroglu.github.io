@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true
-  });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -94,7 +88,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="about-section" ref={ref}>
+    <section id="about" className="about-section">
       <div className="about-background">
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>
@@ -104,7 +98,7 @@ const About = () => {
         <motion.div
           className="section-header"
           initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">About Me</h2>
@@ -118,7 +112,7 @@ const About = () => {
           className="about-content"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate="visible"
         >
           {/* Introduction */}
           <motion.div className="intro-card" variants={itemVariants}>
@@ -187,7 +181,7 @@ const About = () => {
                   key={categoryIndex} 
                   className="skill-category"
                   initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
                 >
                   <h4 className="category-title">{category.title}</h4>
@@ -197,7 +191,7 @@ const About = () => {
                         key={skillIndex}
                         className="skill-tag"
                         initial={{ opacity: 0, scale: 0.8 }}
-                        animate={inView ? { opacity: 1, scale: 1 } : {}}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ 
                           duration: 0.4, 
                           delay: (categoryIndex * 0.2) + (skillIndex * 0.05) 

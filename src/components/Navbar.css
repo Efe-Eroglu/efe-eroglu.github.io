@@ -94,6 +94,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+
   .nav-toggle {
     display: block;
   }
@@ -118,5 +122,39 @@
 
   .nav-link::after {
     display: none;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+
+  .logo-image {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-toggle {
+    font-size: 1.25rem;
+  }
+
+  .nav-menu {
+    top: 60px;
+    padding: 1.5rem 0;
   }
 }

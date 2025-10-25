@@ -317,6 +317,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .about-section {
+    padding: 100px 1rem 60px;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -350,6 +354,80 @@
   .skill-tag {
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-section {
+    padding: 80px 1rem 40px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .intro-card,
+  .info-section,
+  .skills-section {
+    padding: 1rem;
+  }
+
+  .intro-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .intro-card p {
+    font-size: 0.9rem;
+  }
+
+  .info-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .institution {
+    font-size: 0.95rem;
+  }
+
+  .period {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .skill-category {
+    padding: 1rem;
+  }
+
+  .skills-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 1rem;
+  }
+
+  .skill-tag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
   }
 }
 

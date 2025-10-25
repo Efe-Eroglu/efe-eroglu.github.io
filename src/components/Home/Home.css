@@ -190,6 +190,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .home-section {
+    padding: 100px 1rem 60px;
+  }
+
   .home-title {
     font-size: 2.5rem;
   }
@@ -210,5 +214,38 @@
   .btn {
     width: 100%;
     max-width: 280px;
+  }
+
+  .social-links {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-section {
+    padding: 80px 1rem 40px;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .home-description {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+    font-size: 1.3rem;
   }
 }

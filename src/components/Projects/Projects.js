@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { FaGithub, FaExternalLinkAlt, FaMobile, FaGlobe, FaDatabase, FaBrain } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true
-  });
-
   const [filter, setFilter] = useState('all');
 
   const projects = [
@@ -164,7 +158,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="projects-section" ref={ref}>
+    <section id="projects" className="projects-section">
       <div className="projects-background">
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>
@@ -174,7 +168,7 @@ const Projects = () => {
         <motion.div
           className="section-header"
           initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">Featured Projects</h2>
@@ -188,7 +182,7 @@ const Projects = () => {
         <motion.div
           className="filter-buttons"
           initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
           {filters.map((filterBtn) => (
@@ -209,14 +203,12 @@ const Projects = () => {
               key={project.id}
               className="project-card"
               initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <div 
-                className="project-image"
-                style={{ backgroundImage: `url(${project.image})` }}
-              >
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-actions">
                     {project.title !== 'Öğrenio' && project.title !== 'SynapSense' && (
