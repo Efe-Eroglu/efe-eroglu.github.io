@@ -27,43 +27,70 @@ const About = () => {
 
   const education = [
     {
-      institution: 'University Name',
-      degree: 'Masters in Computer Science',
-      period: '2023 - Present',
-      description: 'Specializing in AI and Machine Learning'
+      institution: 'Karadeniz Technical University',
+      degree: 'Master of Science in Software Engineering',
+      period: '2025 - 2027',
+      description: 'Conducting research in Large Language Models (LLM), Explainable AI (XAI), Machine Learning & Deep Learning. Working on a thesis that examines the role of LLMs in software development processes.'
     },
     {
-      institution: 'University Name',
-      degree: 'B.S. in Software Engineering',
-      period: '2019 - 2023',
-      description: 'Graduated with honors, relevant coursework in web development and databases'
+      institution: 'Fırat University',
+      degree: 'Bachelor of Science in Software Engineering',
+      period: '2021 - 2025',
+      description: 'Actively participated in Teknofest and TÜBİTAK projects. Developed an AI-powered mobile education application for children with special needs (published on Play Store). Gained project management experience with Agile/Scrum methodologies.'
     }
   ];
 
   const experience = [
     {
-      company: 'Company Name',
+      company: 'Craft Technology',
       position: 'Software Engineer',
-      period: '2023 - Present',
-      description: 'Developing scalable web applications and mobile solutions'
+      period: 'July 2025 - September 2025',
+      description: 'Worked on Flutter-based mobile application development processes. Transformed UI/UX designs into functional applications. Managed sprint tasks, testing processes, and team coordination within Agile/Scrum framework.'
     },
     {
-      company: 'Company Name',
-      position: 'Junior Developer',
-      period: '2022 - 2023',
-      description: 'Collaborated on GIS systems and enterprise applications'
+      company: 'Intellium A.Ş.',
+      position: 'AI Developer',
+      period: 'September 2024 - January 2025',
+      description: 'Developed DistilBERT-based NLP model for user request classification. Integrated the model with web platform using RabbitMQ infrastructure, reducing manual processing time. Developed chatbot and ATS systems. Conducted sprint planning with 6-person AI team using Scrum/Trello.'
+    },
+    {
+      company: 'Techbros',
+      position: 'Data Science Intern',
+      period: 'July 2024 - August 2024',
+      description: 'Performed data querying, cleaning, and analysis using SQL. Developed Power BI dashboards for KPI tracking and business intelligence reporting. Provided team training and mentorship, contributing to data modeling processes.'
     }
   ];
 
-  const skills = [
-    { name: 'React', level: 90 },
-    { name: 'Node.js', level: 85 },
-    { name: 'Python', level: 88 },
-    { name: 'JavaScript', level: 92 },
-    { name: 'TypeScript', level: 85 },
-    { name: 'MongoDB', level: 80 },
-    { name: 'PostgreSQL', level: 75 },
-    { name: 'AWS', level: 70 }
+  const skillCategories = [
+    {
+      title: 'Artificial Intelligence & Data Science',
+      skills: [
+        'Python', 'PyTorch', 'TensorFlow', 'Scikit-Learn', 'MLflow', 'PySpark',
+        'Machine Learning', 'Deep Learning', 'NLP', 'LLM', 'RAG', 'Vector Databases',
+        'AI', 'XAI', 'Data Analysis', 'Data Visualization', 'Power BI'
+      ]
+    },
+    {
+      title: 'Backend / API Development',
+      skills: [
+        'FastAPI', 'Flask', 'Go (Golang)', 'PostgreSQL', 'SQL', 'RabbitMQ',
+        'Docker', 'CI/CD', 'MLOps', 'AWS', 'GCP', 'OOP', 'RESTful API'
+      ]
+    },
+    {
+      title: 'Mobile & Web Development',
+      skills: [
+        'Flutter (Dart)', 'React.js', 'JavaScript',
+        'Responsive UI/UX', 'Mobile App Development', 'API Integration'
+      ]
+    },
+    {
+      title: 'Project Management & Methodologies',
+      skills: [
+        'Agile/Scrum', 'Agile Software Development', 'Sprint Planning',
+        'Trello/Jira', 'Team Coordination', 'Git/GitHub'
+      ]
+    }
   ];
 
   return (
@@ -82,8 +109,8 @@ const About = () => {
         >
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
-            A passionate software engineer and researcher combining technical expertise
-            with academic rigor to create innovative solutions.
+            A passionate developer working in artificial intelligence and software engineering, 
+            combining academic research with industrial experience.
           </p>
         </motion.div>
 
@@ -97,14 +124,15 @@ const About = () => {
           <motion.div className="intro-card" variants={itemVariants}>
             <h3>Hi There!</h3>
             <p>
-              I'm a software engineer with a deep passion for technology and research.
-              My journey combines hands-on development experience with academic exploration,
-              focusing on creating solutions that bridge the gap between theory and practice.
+              I'm a developer working in artificial intelligence and software engineering, 
+              deeply passionate about technology and research. My journey focuses on creating 
+              solutions that bridge the gap between theory and practice by combining academic 
+              research with practical development experience.
             </p>
             <p>
-              Currently pursuing my Master's degree while working on cutting-edge projects
-              in web development, mobile applications, and GIS systems. I believe in continuous
-              learning and contributing to the tech community through open-source and research.
+              Currently pursuing my master's degree while working on projects in large language 
+              models, NLP, and mobile application development. I believe in continuous learning 
+              and contributing to the tech community through open-source projects and research.
             </p>
           </motion.div>
 
@@ -153,22 +181,34 @@ const About = () => {
           {/* Skills */}
           <motion.div className="skills-section" variants={itemVariants}>
             <h3>Technical Skills</h3>
-            <div className="skills-grid">
-              {skills.map((skill, index) => (
-                <div key={index} className="skill-item">
-                  <div className="skill-header">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percentage">{skill.level}%</span>
+            <div className="skills-categories">
+              {skillCategories.map((category, categoryIndex) => (
+                <motion.div 
+                  key={categoryIndex} 
+                  className="skill-category"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                >
+                  <h4 className="category-title">{category.title}</h4>
+                  <div className="skills-tags">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.span
+                        key={skillIndex}
+                        className="skill-tag"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={inView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{ 
+                          duration: 0.4, 
+                          delay: (categoryIndex * 0.2) + (skillIndex * 0.05) 
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        {skill}
+                      </motion.span>
+                    ))}
                   </div>
-                  <div className="skill-bar">
-                    <motion.div
-                      className="skill-progress"
-                      initial={{ width: 0 }}
-                      animate={inView ? { width: `${skill.level}%` } : {}}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                    />
-                  </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
